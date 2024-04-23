@@ -3,25 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Pop-up Button</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ChatBox</title>
 </head>
 <body>
-
-<!-- Chatbot Button -->
-<button id="chatButton">Open Chat</button>
-
-<!-- Chatbot Pop-up Container -->
-<div id="chatContainer" class="chat-container">
-    <div class="chat-content">
-        <div id="chatMessages" class="chat-messages"></div>
-        <input type="text" id="userInput" placeholder="Type your message...">
-        <button id="sendMessage">Send</button>
+    
+    <div class="chatbox-wrapper">
+        <div class="chatbox-toggle">
+           <i class="bx bx-message-dots"></i>
+        </div>
+        <div class="chatbox-message-wrapper">
+            <div class="chatbox-message-header">
+                <div class="chatbox-message-profile">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDBBfA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt=""> 
+                </div>
+                 <h4 class="chatbox-message-name">Binary Brains</h4>
+                 <p class="chatbox-message-status">Online</p>
+                </div>
+                <div class="chatbox-message-content">
+                    <div class="chatbox-message-item sent">
+                        <span class="chatbox-message-item-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </span>
+                        <span class="chatbox-message-item-time">08:30</span>
+                    </div>
+                    <div class="chatbox-message-item received">
+                        <span class="chatbox-message-item-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </span>
+                        <span class="chatbox-message-item-time">08:30</span>
+                    </div>
+                </div>
+                <div class="chatbox-message-bottom">
+                    <form action="#" class="chatbox-message-form">
+                        <textarea rows="1" placeholder="Type message..." class="chatbox-message-input"></textarea>
+                        <button type="submit" class="chatbox-message-submit"><i class="bx bx-send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="chatbox-message-dropdown">
+            <i class="bx bx-dots-vertical-round chatbox-message-dropdown-toggle"></i>
+            <ul class="chatbox-message-dropdown-menu">
+                <li>
+                    <a href="#">Search</a>
+                </li>
+                <li>
+                    <a href="#">Report</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 
-<!-- JavaScript -->
-<script src="script.js"></script>
 
+       <script src="script.js"></script>
 </body>
 </html>
